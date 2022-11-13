@@ -1,0 +1,67 @@
+
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+<script>
+
+/*
+setInterval(function name(){ 
+console.log(document.readyState)
+},1000)
+*/
+
+function ready(callback){
+      // in case the document is already rendered
+      if (document.readyState!='loading') callback();
+      // modern browsers
+      else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
+      // IE <= 8
+      else document.attachEvent('onreadystatechange', function(){
+          if (document.readyState=='complete') callback();
+      });
+  }
+
+  ready(function(){
+    var s = document.getElementById('submit');
+    // console.log(s);
+    s.onclick = loading;
+
+  })
+
+  function loading(){
+    // console.log("loading ... ");
+    var p = document.getElementById('progressbar');
+    p.classList.remove("hidden");
+  }
+
+</script>
+
+<!-- As a heading -->
+<nav class="navbar fixed-top bg-dark">
+  <div class="container-fluid">
+
+    <div class="d-flex justify-content-start">
+      <a href="{{ url_for('home')}}" class="btn bi bi-backspace-fill btn-twtblue shadow-lg" ></a>
+      
+      <span class="navbar-brand ms-3 mb-0 h1 text-light">
+        <!-- <i class="mdi mdi-pound-box "></i> -->
+        HashTags & Sentiment
+      </span>
+      </div>
+    
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+
+    <div id="progressbar" class="progress hidden">
+      <!-- <h4>LOADING...</h4> -->
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+    </div>
+
+    {{ wtf.quick_form(form, novalidate=True) }}
+
+  </div>
+</main>

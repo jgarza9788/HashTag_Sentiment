@@ -1,0 +1,123 @@
+/* This CSS file will need to be added to the styling of 
+your web pages for the styles to be rendered. */
+
+
+
+body{
+  background-color: #14171A !important;
+}
+
+.navbar{
+  background-color: #657786 !important;
+}
+
+
+main{
+  background-color: #14171A  !important;
+  margin: 114px 0px 0px 0px !important;
+  padding: 12px 12px;
+  /* width: 100vw; */
+  /* height: 100vh; */
+}
+
+table{
+  width: 100% !important;
+  border-color: #2b2e30 !important;
+  border-radius: 1rem !important;
+}
+
+tr:hover{
+  background-color: #2b2e30 !important;
+}
+
+th ,td{
+  color:#f8f9fa;
+  padding: 2px !important;
+}
+
+th a i 
+{
+  font-size: 24px !important;
+  padding: 0.1rem !important;
+  width: 100% !important;
+}
+
+tr td a 
+{
+  font-size: 24px !important;
+  padding: 0.1rem !important;
+  width: 100% !important;
+  
+}
+
+
+
+
+.btn-twtblue{
+  background-color: #1DA1F2 !important;
+  color: #f8f9fa !important;
+}
+
+.sort-on,.sort-on:hover,.sort-off:hover{
+  background-color: #1DA1F2 !important;
+  color: #f8f9fa !important;
+  border-style: solid;
+  border-color: #f8f9fa;
+}
+
+.sort-off{
+  background-color: transparent !important;
+  color: #f8f9fa !important;
+  border-style: solid;
+  border-color: #f8f9fa;
+}
+
+.hidden{
+  display: none !important;
+}
+
+
+
+.container{
+  padding: 0px ;
+}
+
+.input-group{
+padding: 0px;
+}
+
+label{
+  color: #f8f9fa;
+  font-size: 24px !important;
+  margin: 0.5rem 0rem !important;
+}
+
+#submit{
+  margin: 24px 0px !important;
+  background-color: #1DA1F2;
+  color: #f8f9fa;
+
+}
+
+.help-block{
+  color: red !important;
+}
+
+
+.anim-this{
+
+  animation-name: fade;
+  animation-duration: 0.5s;  
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
+
